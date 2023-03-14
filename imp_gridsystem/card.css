@@ -1,0 +1,44 @@
+div.card {
+  width: 100%;
+  border: 1px solid var(--secondary);
+  height: fit-content;
+}
+
+.card-title {
+  color: var(--dark);
+  background-color: var(--secondary);
+  font-weight: lighter;
+  padding: 10px !important;
+  font-size: 1.3rem;
+}
+
+div.card-primary {
+  padding: 0;
+  border: 1px solid var(--primary);
+}
+
+.card-primary > .card-title {
+  color: var(--white) !important;
+  background-color: var(--primary);
+  padding: 10px !important;
+}
+
+div.card-primary > .card-body {
+  padding: 10px !important;
+}
+
+div.card-body div[class*='col'] {
+  padding: 5px;
+}
+
+div.card > p.subtitle {
+  padding: 0 10px;
+  font-size: 1rem;
+  color: var(--secondary);
+}
+
+div.card-body {
+  background-color: transparent;
+  padding: 10px;
+  font-size: 1rem;
+}

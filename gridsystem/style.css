@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(234, 234, 234);
+}
+
+/* container atau wrapper dibuat untuk menampung column grid */
+.wrapper {
+  margin: 0 auto;
+  font-size: 0.8em;
+  width: 100%;
+  padding: 0 30px;
+  /* background-color: antiquewhite; */
+}
+
+/* 
+  mendefinisikan column dengan 12 grid system.
+  Ada dua jenis grid, grid 12 dan grid 16. 
+  Kita menggunakan grid 12 yang lebih umum dan sering
+  digunakan.
+
+  rumus pembagian grid 100% / 12 = 8.33.
+  
+  setiap grid harus dikurangi dengan angka 1 grd (8.33),
+  kecual grid full yang 12.
+*/
+.col1 {width: 8.33%;}
+.col2 {width: 16.66%;}
+.col3 {width: 25%;}
+.col4 {width: 33.33%;}
+.col5 {width: 41.66%;}
+.col6 {width: 50%;}
+.col7 {width: 58.33%;}
+.col8 {width: 66.66%;}
+.col9 {width: 75%;}
+.col10 {width: 83.33%;}
+.col11 {width: 91.66%;}
+.col12 {width: 100%;}
+
+.wrapper::after {
+  content: "";
+  clear: both;
+  /* 
+    display table membuat height dari wrapper akan auto
+    mengikuti jumlah konten di tingginya. Bisa dibuktikan 
+    dengan memberikan background color di .wrapper.
+  */
+  display: table;
+}
+
+[class*="col"] {
+  float: left;
+  border: 1px solid rgb(0, 170, 255);
+  /* 
+    jangan pernah memberikan margin, karena margin
+    tidak akan masuk dalam hitungan border-box 
+  */
+  /* margin: 5px; */
+  padding: 10px 5px;
+}
+
+/* Aturan CSS untuk ponsel */
+@media screen and (max-width: 400px) {
+  /* Aturan CSS untuk layar dengan lebar kurang dari atau sama dengan 400px */
+  .wrapper {
+    width: 100%;
+  }
+
+  [class*="col"] {
+    width: 100%;
+    padding: 20px 10px;
+  }
+}
+
+/* Aturan CSS untuk tablet */
+@media screen and (min-width: 401px) and (max-width: 920px) {
+  /* Aturan CSS untuk layar dengan lebar antara 768px dan 1023px */
+  .wrapper {
+    width: 100%;
+  }
+
+  .col1 { width: 25%;}
+}
+
+.mt-1 {
+  margin-top: 10px;
+}
+
+.mt-2 {
+  margin-top: 20px;
+}
+
+.mt-3 {
+  margin-top: 30px;
+}
+
+.mt-4 {
+  margin-top: 40px;
+}

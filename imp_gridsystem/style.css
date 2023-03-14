@@ -1,0 +1,99 @@
+:root {
+  /* --primary: #2b5797; */
+  /* --primary: #ff0097; */
+  --primary: #603cba;
+  --secondary: #dedede;
+  --danger: #ee1111 ;
+  --warning: #ffc40d;
+  --success: #1e7145;
+  --light: #eff4ff;
+  --white: #fff;
+  --dark: #1d1d1d;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+}
+
+.wrapper {
+  width: 100%;
+  height: auto;
+  overflow: hidden; 
+}
+.wrappper::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col"] {
+  float: left;
+  padding: 15px 40px;
+  /* border: 1px solid gray; */
+}
+
+.col1 {width: 8.33%;}
+.col2 {width: 16.66%;}
+.col3 {width: 25%;}
+.col4 {width: 33.33%;}
+.col5 {width: 41.66%;}
+.col6 {width: 50%;}
+.col7 {width: 58.33%;}
+.col8 {width: 66.66%;}
+.col9 {width: 75%;}
+.col10 {width: 83.33%;}
+.col11 {width: 91.66%;}
+.col12 {width: 100%;}
+
+.mt-1 {
+  margin-top: 10px !important;
+}
+
+.mt-2 {
+  margin-top: 20px !important;
+}
+
+.mt-3 {
+  margin-top: 30px !important;
+}
+
+.mt-4 {
+  margin-top: 40px !important;
+}
+
+.shadow-1 {
+  box-shadow: 4px 4px 4px var(--secondary);
+}
+
+/* Aturan CSS untuk ponsel */
+@media screen and (max-width: 400px) {
+  /* Aturan CSS untuk layar dengan lebar kurang dari atau sama dengan 400px */
+  .wrapper {
+    width: 100%;
+  }
+
+  [class*="col"] {
+    width: 100%;
+    padding: 20px 10px;
+  }
+}
+
+/* Aturan CSS untuk tablet */
+@media screen and (min-width: 400px) and (max-width: 920px) {
+  /* Aturan CSS untuk layar dengan lebar antara 768px dan 1023px */
+  .wrapper {
+    width: 100%;
+  }
+
+  [class*="col"] {
+    width: 100%;
+    padding: 20px 10px;
+  }
+}

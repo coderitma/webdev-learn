@@ -1,0 +1,12 @@
+img.image {
+  width: 100%;
+  height: auto;
+}
+
+img.thumbnail {
+  border: 5px solid var(--secondary);
+}
+
+img.rounded {
+  border-radius: 5px;
+}
