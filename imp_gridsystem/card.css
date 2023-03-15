@@ -42,3 +42,68 @@ div.card-body {
   padding: 10px;
   font-size: 1rem;
 }
+
+/* EXPAND CARD */
+.panel-container {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+
+.panel {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50vh;
+  color: #fff;
+  cursor: pointer;
+  flex: .5;
+  /* padding: 10px; */
+}
+
+.panel-body {
+  font-size: 1em;
+  padding: 15px;
+  background-color: rgba(1, 1, 1, 0.5);
+  /* text-align: center; */
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: none;
+}
+
+.panel-body p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.panel.active {
+  flex: 5;
+  border-radius: 20;
+  white-space: wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.panel.active > .panel-body{
+  white-space: wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  .panel {
+    margin: 0;
+    border-radius: 0;
+  }
+}
